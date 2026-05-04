@@ -1,0 +1,80 @@
+<?php
+/**
+ * @copyright       (c) 2000-2026 XOOPS Project (https://xoops.org)
+ * @license             GNU GPL 2 (https://www.gnu.org/licenses/gpl-2.0.html)
+ * _LANGCODE    nl
+ * _CHARSET     UTF-8
+ */
+define('_MI_SYSTEM_NAME', 'Systeem');
+define('_MI_SYSTEM_DESC', 'Voor het beheer van de kerninstelling van de site.');
+define('_MI_SYSTEM_BNAME2', 'Gebruikersmenu');
+define('_MI_SYSTEM_BNAME3', 'Inloggen');
+define('_MI_SYSTEM_BNAME4', 'Zoeken');
+define('_MI_SYSTEM_BNAME5', 'Wachtende inhoud');
+define('_MI_SYSTEM_BNAME6', 'Hoofdmenu');
+define('_MI_SYSTEM_BNAME7', 'Site-info');
+define('_MI_SYSTEM_BNAME8', 'Wie is online');
+define('_MI_SYSTEM_BNAME9', 'Top-posters');
+define('_MI_SYSTEM_BNAME10', 'Nieuwe leden');
+define('_MI_SYSTEM_BNAME11', 'Recente reacties');
+define('_MI_SYSTEM_BNAME12', 'Meldingsopties');
+define('_MI_SYSTEM_BNAME13', 'Thema\'s');
+define('_MI_SYSTEM_ADMENU1', 'Spandoeken');
+define('_MI_SYSTEM_ADMENU2', 'Blokken');
+define('_MI_SYSTEM_ADMENU3', 'Groepen');
+define('_MI_SYSTEM_ADMENU5', 'Modules');
+define('_MI_SYSTEM_ADMENU6', 'Voorkeuren');
+define('_MI_SYSTEM_ADMENU7', 'Smileys');
+define('_MI_SYSTEM_ADMENU9', 'Gebruikersrangen');
+define('_MI_SYSTEM_ADMENU10', 'Gebruiker bewerken');
+define('_MI_SYSTEM_ADMENU11', 'E-mail gebruikers');
+define('_MI_SYSTEM_ADMENU12', 'Gebruikers zoeken');
+define('_MI_SYSTEM_ADMENU13', 'Afbeeldingen');
+define('_MI_SYSTEM_ADMENU14', 'Avatars');
+define('_MI_SYSTEM_ADMENU15', 'Sjablonen');
+define('_MI_SYSTEM_ADMENU16', 'Reacties');
+define('_MI_SYSTEM_PREFERENCE_BREAK_GENERAL', 'Algemene instellingen');
+define('_MI_SYSTEM_PREFERENCE_TIPS', 'Online hulp?');
+define('_MI_SYSTEM_PREFERENCE_TIPS_DSC', 'Hier krijgt u tips en online hulp');
+define('_MI_SYSTEM_PREFERENCE_ICONS', 'Pictogrammen');
+define('_MI_SYSTEM_PREFERENCE_BREADCRUMB', 'Broodkruimel');
+define('_MI_SYSTEM_PREFERENCE_BREAK_ACTIVE', 'Actieve sectie');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_AVATARS', 'Actieve avatars');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_BANNERS', 'Actieve banners');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_BLOCKSADMIN', '');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_COMMENTS', 'Actieve reacties');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_FILEMANAGER', 'Actieve bestandsbeheerder');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_GROUPS', '');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_IMAGES', 'Actieve afbeeldingenbeheerder');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_MAILUSERS', 'Actieve e-mailgebruikers');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_MODULESADMIN', '');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_PREFERENCES', '');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_SMILIES', 'Actieve smileys');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_TPLSETS', '');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_USERRANK', 'Actieve gebruikersrangen');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_USERS', 'Actieve gebruikers');
+define('_MI_SYSTEM_PREFERENCE_ACTIVE_MAINTENANCE', 'Actief onderhoud');
+define('_MI_SYSTEM_PREFERENCE_BREAK_PAGER', 'Aantal rijen dat in de administratie moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_AVATARS_PAGER', 'Aantal avatars dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_BANNERS_PAGER', 'Aantal banners dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_COMMENTS_PAGER', 'Aantal reacties dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_GROUPS_PAGER', 'Aantal groepen dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_IMAGES_PAGER', 'Aantal afbeeldingen dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_SMILIES_PAGER', 'Aantal smilies dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_USERRANKS_PAGER', 'Aantal rangen dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_USERS_PAGER', 'Aantal gebruikers dat per pagina moet worden weergegeven');
+define('_MI_SYSTEM_PREFERENCE_BREAK_EDITOR', 'Editor-instellingen');
+define('_MI_SYSTEM_PREFERENCE_BLOCKS_EDITOR', 'Editor voor blokken:');
+define('_MI_SYSTEM_PREFERENCE_BLOCKS_EDITOR_DSC', '');
+define('_MI_SYSTEM_PREFERENCE_COMMENTS_EDITOR', 'Editor voor reacties:');
+define('_MI_SYSTEM_PREFERENCE_COMMENTS_EDITOR_DSC', '');
+define('_MI_SYSTEM_PREFERENCE_GENERAL_EDITOR', 'Editor voor alle modules:');
+define('_MI_SYSTEM_PREFERENCE_GENERAL_EDITOR_DSC', '');
+define('_MI_SYSTEM_PREFERENCE_ANONPOST', '');
+define('_MI_SYSTEM_PREFERENCE_REDIRECT', '');
+define('_MI_SYSTEM_PREFERENCE_JQUERY_THEME', 'jQuery-thema');
+define('_MI_DEFAULT_NOTIFICATION_METHOD_DISABLE', 'Tijdelijk uitschakelen');
+define('_MI_DEFAULT_NOTIFICATION_METHOD_EMAIL', 'E-mail');
+define('_MI_DEFAULT_NOTIFICATION_METHOD_PM', 'Privébericht');
+define('_MI_SYSTEM_MENUS_ACTIVE', 'Menusysteem inschakelen');
+define('_MI_SYSTEM_MENUS_ACTIVE_DESC', 'Schakel het ingebouwde menubeheersysteem in voor sitenavigatie');

@@ -1,0 +1,50 @@
+<div class="outer" id="help-template">
+<h1 class="head">Hulp: <a class="ui-corner-all tooltip" href="&lt;{$xoops_url}&gt;/modules/profile/admin/index.php" title="Back to the Administration of Profile"> Profiel <img alt="Back to the Administration of Profile" src="&lt;{xoAdminIcons 'home.png'}&gt;"/></a></h1>
+ -----Help-inhoud ---------- 
+<h4 class="odd">BESCHRIJVING</h4>
+<p class="even">De Profielmodule is bedoeld voor het beheren van aangepaste gebruikersprofielvelden.</p>
+<h4 class="odd">INSTALLEREN/VERWIJDEREN</h4>
+<p>Er zijn geen speciale maatregelen nodig, volg het standaard installatieproces – pak de map /profile uit in de map ../modules. Installeer de module via Beheer -&gt; Systeemmodule -&gt; Modules.</p>
+<p>Gedetailleerde instructies voor het installeren van modules zijn beschikbaar in de <a href="https://www.gitbook.com/book/xoops/xoops-operations-guide/" target="_blank" title="XOOPS Operations Manual">XOOPS-bedieningshandleiding</a> <br/><br/></p>
+<h4 class="odd">GEBRUIKSAANWIJZING</h4>
+<p class="even">Om deze module in te stellen, heeft u het volgende nodig:</p>
+<ul>
+<li>Configureer uw voorkeuren voor de module (zie ‘Voorkeuren’) en optioneel het Profielblok als u van plan bent deze te gebruiken (zie ‘Blokken’).</li>
+<li>Bewerk bestaande categorieën of voeg nieuwe toe.</li>
+<li>Bewerk bestaande velden of voeg nieuwe toe. Hier kunt u opgeven welke velden zichtbaar zijn in welke categorie, en of ze zichtbaar zijn tijdens de gebruikersregistratie.</li>
+<li>Definieer de volgorde van de registratiestappen.</li>
+<li>En tot slot kunt u machtigingen instellen voor individuele velden: welke velden kunnen worden bewerkt en welke doorzoekbaar zijn.<br/><br/></li>
+</ul>
+<h4 class="odd">Antispammaatregelen</h4>
+<p class="even">Om spamregistraties te minimaliseren, doet u het volgende:</p>
+<ul>
+<li> ga naar de Protector-module in Admin, ga naar Voorkeuren en vervolgens onderaan naar deze optie:
+
+            "Stop forumspam"
+            Controleert POST-gegevens op spammers die zijn geregistreerd in de database www.stopforumspam.com. <br/>
+            Stel dit in op "Ban the IP (no limit)"
+        </li>
+<br/>
+<li> in /class/captcha/config.php, zorg ervoor dat de modus is ingesteld als "tekst":<br/><br/>
+<span style="font-style: italic;">     return $config = array(<br/>
+    'uitgeschakeld' =&gt; false, // CAPTCHA uitschakelen<br/>
+    'mode' =&gt; 'text', // standaardmodus, je kunt kiezen uit 'text', 'image', 'recaptcha' (api-sleutel vereist)<br/>
+    'naam' =&gt; 'xoopscaptcha', // captcha-naam<br/>
+    'skipmember' =&gt; true, // CAPTCHA-controle voor leden overslaan<br/>
+    'maxattempts' =&gt; 10, // Maximaal aantal pogingen voor elke sessie<br/>
+    );</span></li>
+<br/>
+<li> Ga in de Profielmodule naar Beheerder en in de Basisstap naar:<br/>
+
+            /modules/profile/admin/step.php?id=1<br/>
+
+            zet "Opslaan na stop" op "Nee"
+        </li>
+<br/><br/>
+<li> Stel in Profielvoorkeuren de optie "Gebruik Captcha na de tweede registratiestap" in op "Ja" (dit is de standaardinstelling)</li>
+<br/>
+<ul>
+<h4 class="odd">TUTORIAL</h4>
+<p class="even">Handleiding binnenkort beschikbaar.<br/></p>
+ -----Help-inhoud ---------- 
+</ul></ul></div>
