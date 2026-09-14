@@ -1,0 +1,136 @@
+html OPENBAAR "-//W3C//DTD HTML 4.01 Transitional//EN"
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>XOOPS Installatie-instructies</title>
+<meta content="XOOPS" name="keywords"/>
+<meta content="XOOPS installation guide" name="description"/>
+<style type="text/css">
+        body {
+            font-family:                        Lucida Grande, Verdana, Geneva, Sans-serif;
+            margin:                             0;
+            padding:                            0;
+            font-size:                          13px;
+            color:                              #333;
+            background-color:                   #fff;
+        }
+
+        a {
+            color:                              #3D9DD3;
+            background-color:                   transparent;
+            text-decoration:                    none;
+            font-weight:                        normal;
+        }
+
+        a:visited {
+            color:                              #3D9DD3;
+            background-color:                   transparent;
+            text-decoration:                    none;
+        }
+
+        a:hover {
+            color:                              #3D9DD3;
+            text-decoration:                    none;
+            background-color:                   transparent;
+        }
+
+        .page {
+            background-color:                   #fff;
+            margin:                             10px 30px 0;
+            padding:                            0;
+        }
+
+        .page h1 {
+            background-color:                   transparent;
+            border-bottom:                      1px solid #999;
+            color:                              #000;
+            font-size:                          18px;
+            font-weight:                        bold;
+            margin:                             28px 0 16px 0;
+            padding:                            5px 0 6px 0;
+        }
+
+        .page h2 {
+            background-color:                   transparent;
+            color:                              #000;
+            font-size:                          16px;
+            font-weight:                        bold;
+            margin:                             28px 0 16px 0;
+            padding:                            5px 0 6px 0;
+        }
+
+        .page h3 {
+            background-color:                   transparent;
+            color:                              #000;
+            font-size:                          14px;
+            font-weight:                        bold;
+        }
+
+        .page ul {
+            margin:                             20px 0 15px 0;
+        }
+
+        .page li {
+            margin-bottom:                      9px;
+        }
+
+        .page li p {
+            margin-left:                        0;
+            margin-right:                       0;
+        }
+
+        p {    }
+
+    </style>
+</head>
+<body>
+<div class="page">
+<h1>XOOPS installeren</h1>
+<h2>Eerste installatie</h2>
+<h3>Voorwoord:</h3>
+<p>
+<abbr title="eXtensible Object-Oriented Portal System">XOOPS</abbr> is een open source
+        Object-georiënteerd webpublicatiesysteem geschreven in PHP. Het is een ideaal hulpmiddel voor
+        het ontwikkelen van kleine tot grote dynamische gemeenschapswebsites, intra-bedrijfsportals, bedrijfsportals, weblogs en nog veel meer.
+    </p>
+<p>
+        XOOPS wordt vrijgegeven onder de voorwaarden van de
+        <a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="external">GNU Algemene Publieke Licentie (GPL)</a>
+        versie 2 of hoger, en is gratis te gebruiken en aan te passen.
+        Het is gratis om het opnieuw te distribueren, zolang u zich aan de distributievoorwaarden van de GPL houdt.
+    </p>
+<h2>Vereisten</h2>
+<ul>
+<li>WWW-server (<a href="http://www.apache.org/" rel="external">Apache</a>, <a href="https://www.nginx.com/" rel="external" s="">NGINX</a>, IIS, enz.)</li>
+<li><a href="https://www.php.net/" rel="external">PHP</a> 8.2 of hoger, 8.4+ aanbevolen</li>
+<li><a href="https://www.mysql.com/" rel="external">MySQL</a> 5.7 .8 of hoger, MySQL 8.4.5+ aanbevolen
+Met</li>
+</ul>
+<h3>Voordat u installeert</h3>
+<ol>
+<li>WWW-server, PHP en databaseserver correct instellen.</li>
+<li>Bereid een database voor uw XOOPS-site voor.</li>
+<li>Maak een gebruikersaccount aan en verleen de gebruiker toegang tot de database.</li>
+<li>Maak de mappen en de bestanden beschrijfbaar: %s</li>
+<li>Uit veiligheidsoverwegingen wordt u ten zeerste aangeraden de twee onderstaande mappen te verwijderen <a href="http://phpsec.org/projects/guide/3.html" rel="external">documenthoofdmap</a> en wijzig de mapnamen: %s</li>
+<li>Maak (indien nog niet aanwezig) en maak de mappen schrijfbaar: %s</li>
+<li>Schakel cookie en JavaScript van uw browser in.</li>
+</ol>
+<h2>Lokaal installeren</h2>
+<p>Als u een lokale omgeving gebruikt voor ontwikkeling of testen, zorg er dan voor dat u over de vorige beschikt
+    eisen voldaan. Zodra dit is gebeurd, kopieert u de inhoud van het <em>htdocs</em> directory (from the XOOPS
+    distribution file) to the root document path of your web environment. Once the files are copied there,
+    you can start the install by pointing you browser to "http://<em>jouwsite.com</em>". Hierdoor wordt het installatieproces gestart.
+</p>
+<h2>Installeren op een gehost platform</h2>
+<p>Als u in een gehoste omgeving werkt, pak dan de XOOPS-bestanden lokaal uit of op de server als u dat hebt
+    shell-toegang (d.w.z. SSH). Als u klaar bent, zorg er dan voor dat u alle XOOPS-bestanden uit het <em>htdocs</em>
+    directory naar uw rootwebdirectory (uw provider verstrekt deze locatie meestal met aanwijzingen).
+    Zodra de bestanden daarheen zijn gekopieerd, kunt u de installatie starten door in uw browser naar
+    "http://<em>jouwsite.com</em>". Hierdoor wordt het installatieproces gestart.
+</p>
+<h2>De installatie wordt voortgezet</h2>
+<p>Volg gewoon de stapsgewijze instructies in het installatieprogramma.</p>
+</div>
+</body>
+</html>

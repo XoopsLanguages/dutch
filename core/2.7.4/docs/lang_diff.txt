@@ -1,0 +1,850 @@
+TAALVERSCHILLEN
+=====================
+
+Hieronder staan de taalverschillen tussen de ene versie en de volgende versie.
+
+================================
+
+================================
+2026/09: Version 2.7.4-Beta2
+================================
+/htdocs/modules/profile/language/english/admin.php
+- added define('_PROFILE_AM_DELETE_FAILED', 'Deleting %s failed; the account was not removed');
+
+/htdocs/modules/system/language/english/admin/preferences.php
+- added define('_MD_AM_TWOFACTORMODE', 'Two-factor authentication');
+- added define('_MD_AM_TWOFACTORMODEDSC', 'Off pauses every second-factor challenge while keeping each member\'s enrolment. Optional lets members enrol an authenticator app or e-mail codes, and challenges members who have enrolled.');
+- added define('_MD_AM_TWOFACTORMODE_OFF', 'Off (paused)');
+- added define('_MD_AM_TWOFACTORMODE_OPTIONAL', 'Optional');
+
+/htdocs/language/english/user2fa.php (new file)
+- added define('_US_2FA_HTTP_LOGIN', 'This popup cannot complete a two-factor login over HTTP because your password would be sent without encryption. Use the site login instead, or ask the administrator to enable HTTPS for the site.');
+- added define('_US_2FA_TITLE', 'Second step');
+- added define('_US_2FA_PROMPT', 'Enter the code from your authenticator app');
+- added define('_US_2FA_CODE', 'Authenticator code');
+- added define('_US_2FA_PROMPT_EMAIL', 'We sent a six-digit code to %s. Enter it below.');
+- added define('_US_2FA_CODE_EMAIL', 'Code from your e-mail');
+- added define('_US_2FA_SEND', 'Send a new code');
+- added define('_US_2FA_SENT', 'A new code was sent to %s. It is valid for ten minutes.');
+- added define('_US_2FA_SEND_WAIT', 'A code was sent less than a minute ago. Check your inbox and spam folder before requesting another one.');
+- added define('_US_2FA_SEND_FAILED', 'The code could not be sent right now. Try again in a moment, or use a recovery code.');
+- added define('_US_2FA_EMAIL_SUBJECT', '%s: your sign-in code');
+- added define('_US_2FA_EMAIL_BODY', 'Your sign-in code for %s is:\n\n%s\n\nIt is valid for %d minutes and works once. If you did not request it, ignore this message and consider changing your password.');
+- added define('_US_2FA_RECOVERY', 'Use a recovery code instead');
+- added define('_US_2FA_RECOVERY_HINT', 'Each recovery code works once. Using one sends you an e-mail.');
+- added define('_US_2FA_SUBMIT', 'Continue');
+- added define('_US_2FA_STARTAGAIN', 'This sign-in has expired or was interrupted. Please start again.');
+- added define('_US_2FA_BACKTOLOGIN', 'Back to the login form');
+- added define('_US_2FA_BADCODE', 'That code was not accepted.');
+- added define('_US_2FA_LOCKED', 'Too many attempts. The second step is locked for fifteen minutes; a recovery code still works.');
+- added define('_US_2FA_UNAVAILABLE', 'The second step is not available right now. A recovery code still works, or contact the site administrator.');
+- added define('_US_2FA_REQUIRED', 'This account has two-factor authentication enabled. Please sign in through the site\'s login page.');
+- added define('_US_2FA_LOCKED_MAIL_SUBJECT', '%s: second step locked');
+- added define('_US_2FA_LOCKED_MAIL_BODY', 'Five wrong second-step codes were entered for your account at %s from %s. The second step is locked for fifteen minutes. If this was not you, change your password.');
+- added define('_US_2FA_RECOVERY_MAIL_SUBJECT', '%s: a recovery code was used');
+- added define('_US_2FA_RECOVERY_MAIL_BODY', 'A recovery code was used to sign in to your account at %s from %s. That code no longer works. If this was not you, change your password and reset your recovery codes.');
+
+/htdocs/language/english/user2famanage.php (new file)
+- added define('_US_2FAM_TITLE', 'Two-factor authentication');
+- added define('_US_2FAM_PASSWORD', 'Your current password');
+- added define('_US_2FAM_ENABLE', 'Set up an authenticator');
+- added define('_US_2FAM_CONFIRM', 'Confirm authenticator');
+- added define('_US_2FAM_CHOOSE', 'Choose how you want to receive your second step: an authenticator app, or a code by e-mail.');
+- added define('_US_2FAM_ENABLE_EMAIL', 'Use e-mail codes');
+- added define('_US_2FAM_EMAIL_HELP', 'E-mail codes: a six-digit code is sent to %s each time you sign in. Less secure than an authenticator app, because anyone who can read your e-mail can pass this step.');
+- added define('_US_2FAM_EMAIL_STEP', 'We sent a six-digit code to %s. Enter it below to confirm. It is valid for ten minutes.');
+- added define('_US_2FAM_CONFIRM_EMAIL', 'Confirm e-mail codes');
+- added define('_US_2FAM_CODE_HELP_EMAIL', 'The six-digit code from the e-mail we just sent you.');
+- added define('_US_2FAM_ENABLED_EMAIL', 'E-mail codes are enrolled. To make a change, enter your current password and the code we e-mail you, or a recovery code. Use the button below to request a code.');
+- added define('_US_2FAM_SEND', 'Send me a code');
+- added define('_US_2FAM_MANUAL', 'Manual setup key');
+- added define('_US_2FAM_SCAN', 'QR code for your authenticator app');
+- added define('_US_2FAM_STEP_APP', 'You need an authenticator: any app or password manager that generates time-based one-time codes (TOTP) will work, on your phone or computer. If you do not have one yet, install one of your choice first (e.g. Google Authenticator, Microsoft Authenticator, Aegis or FreeOTP).');
+- added define('_US_2FAM_STEP_ADD', 'In the app, add an account: scan this QR code, or choose manual entry and type the setup key shown below it.');
+- added define('_US_2FAM_STEP_CODE', 'The app now shows a six-digit code that changes every 30 seconds. Type the code it shows right now into the field below and confirm.');
+- added define('_US_2FAM_CODE_HELP', 'The six-digit code your authenticator app shows right now.');
+- added define('_US_2FAM_HTTP', 'This connection uses plain HTTP. Your password, session, authenticator setup key and recovery codes can be intercepted. Use HTTPS whenever possible.');
+- added define('_US_2FAM_CODES', 'Save these recovery codes now');
+- added define('_US_2FAM_CODES_HELP', 'Each code works once. These codes will not be displayed again. Keep them somewhere safe, separate from this account.');
+- added define('_US_2FAM_DISABLE', 'Disable two-factor authentication');
+- added define('_US_2FAM_REGENERATE', 'Replace recovery codes');
+- added define('_US_2FAM_ENABLED', 'An authenticator is enrolled. Enter your current password and an authenticator or recovery code to make a change.');
+- added define('_US_2FAM_DISABLED', 'Two-factor authentication is disabled.');
+- added define('_US_2FAM_PAUSED', 'The site has paused two-factor challenges. Your factor is kept, and remember-me remains unavailable for enrolled accounts.');
+- added define('_US_2FAM_UNAVAILABLE', 'Two-factor setup or management is unavailable. Please contact the site administrator.');
+- added define('_US_2FAM_STARTAGAIN', 'Setup expired or the account changed. Enter your password to start setup again.');
+- added define('_US_2FAM_BADPASSWORD', 'Your current password was not accepted.');
+- added define('_US_2FAM_RESET', 'Reset this user’s two-factor authentication');
+- added define('_US_2FAM_STATUS_NONE', 'Not enrolled');
+- added define('_US_2FAM_STATUS_TOTP', 'Authenticator app enrolled');
+- added define('_US_2FAM_STATUS_EMAIL', 'E-mail codes enrolled');
+- added define('_US_2FAM_STATUS_UNAVAILABLE', 'Status unavailable');
+- added define('_US_2FAM_RESET_HELP', 'This disables the user’s second factor, whichever method they enrolled, and revokes their recovery codes and remember-me cookies. Existing signed-in sessions remain active. Enter your own administrator password to confirm.');
+- added define('_US_2FAM_RESET_DONE', 'The user’s two-factor authentication was reset.');
+- added define('_US_2FAM_BACK', 'Back to account');
+- added define('_US_2FAM_DONE', 'Two-factor authentication is enabled.');
+- added define('_US_2FAM_REPLACED', 'Previous recovery codes have been revoked.');
+- added define('_US_2FAM_NOTICE_SUBJECT', '%s: two-factor authentication changed');
+- added define('_US_2FAM_NOTICE_BODY', 'Two-factor authentication or recovery codes were changed for your account at %s from %s. If this was not you, contact the site administrator.');
+- added define('_US_2FAM_RESET_SUBJECT', '%s: an administrator reset your two-factor authentication');
+- added define('_US_2FAM_RESET_BODY', 'An administrator disabled your second factor and revoked its recovery codes at %s from %s. Existing signed-in sessions remain active. Sign in and set up two-factor authentication again. Contact the site administrator if this was unexpected.');
+
+/upgrade/language/english/twofactor.php (new file)
+- added define('_XOOPS_UPGRADE_TWOFACTOR_SODIUM_OK', 'Sodium is available for two-factor authentication.');
+- added define('_XOOPS_UPGRADE_TWOFACTOR_SODIUM_MISSING', 'Two-factor authentication requires the PHP sodium extension. Enable it for the web server and reload this page. Without it, setup and authenticator-code verification are unavailable; enrolled users need a recovery code or an administrator reset. Upgrading can continue with two-factor authentication off.');
+
+/htdocs/install/language/english/twofactor.php
+- added define('TWOFACTOR_SODIUM', 'Sodium extension: required for two-factor authentication');
+- added define('TWOFACTOR_SODIUM_MSG', 'Enable the PHP sodium extension for the web server and reload this page before enabling two-factor authentication. Without it, setup and authenticator-code verification are unavailable. Installation can continue with two-factor authentication off.');
+
+================================
+2026/09: Version 2.7.4-Beta1
+================================
+/htdocs/modules/system/language/english/menus/menus.php (new file — front-end labels of the default system menu)
+- moved from /htdocs/modules/system/language/english/admin/menus.php, values unchanged:
+  define('MENUS_HOME', 'Home');
+  define('MENUS_ADMIN', 'Administration');
+  define('MENUS_ACCOUNT', 'Account');
+  define('MENUS_ACCOUNT_EDIT', 'Edit Account');
+  define('MENUS_ACCOUNT_LOGIN', 'Login');
+  define('MENUS_ACCOUNT_LOGOUT', 'Logout');
+  define('MENUS_ACCOUNT_REGISTER', 'Sign Up');
+  define('MENUS_ACCOUNT_MESSAGES', 'Messages');
+  define('MENUS_ACCOUNT_NOTIFICATIONS', 'Notifications');
+  define('MENUS_ACCOUNT_TOOLBAR', 'Toolbar');
+  (resolved at render time from titles seeded by include/menu_seed.php; translations go in
+  language/<lang>/menus/menus.php, see menus.dist.php)
+
+/htdocs/modules/system/language/english/admin/users.php
+- added define('_AM_SYSTEM_USERS_NO_SUCH_USER', 'No such user');
+  (used by admin/users/main.php since 2.5 but never defined; PHP 8 raised an
+  undefined-constant error instead of redirecting)
+
+================================
+2026/08: Version 2.7.3-Final
+================================
+/htdocs/language/english/user.php
+- toegevoegd define('_US_SURETOLOGOUT', 'Are you sure you want to log out?');
+  (bij uitloggen wordt nu om bevestiging gevraagd wanneer het verzoek geen sessietoken bevat)
+
+================================
+2026/08: Version 2.7.3-RC1
+================================
+/htdocs/class/xoopseditor/sceditor/language/english.php (nieuw bestand — SCEditor-editor)
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR', 'SCEditor (BBCode)');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_STRIKE', 'Strikethrough');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_LEFT', 'Align left');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_CENTER', 'Align center');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_RIGHT', 'Align right');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_SIZE', 'Font Size');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_SIZE_PROMPT', 'Size (%s):');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_EMAIL', 'Email');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_EMAIL_PROMPT', 'Email address:');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_SITEURL', 'Site URL');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_SITEURL_PROMPT', 'Site-relative path:');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_QUOTE', 'Quote');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_CODE', 'Code');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_LIST', 'Bulleted list');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_IMAGE', 'Image');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_IMAGE_PROMPT', 'Image URL:');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_YOUTUBE', 'YouTube');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_YOUTUBE_PROMPT', 'YouTube URL or video ID:');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_WIDTH_PROMPT', 'Width:');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_HEIGHT_PROMPT', 'Height:');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_WIKI', 'Wiki link');
+- toegevoegd define('_XOOPS_EDITOR_SCEDITOR_WIKI_PROMPT', 'Wiki page:');
+
+================================
+2026/07: Version 2.7.1-Final
+================================
+/htdocs/themes/xbootstrap5/language/english/main.php
+- toegevoegd define('THEME_COMMENT_OPTIONS', 'Comment View Options');
+  (al aanwezig in themes/xswatch5; hier toegevoegd voor consistentie)
+
+De constanten voor privéberichten zijn hernoemd naar de standaard _MD_ / _AM_ / _MI_-voorvoegsels.
+De Engelse waarden zijn ongewijzigd, dus vertalers hoeven alleen de constanten in hun eigen
+bestanden te hernoemen - opnieuw vertalen is niet nodig.
+
+/htdocs/language/english/pmsg.php
+- hernoemd _PM_* -> _MD_PM_* (35 constanten, bijv. _PM_DELETED -> _MD_PM_DELETED)
+
+/htdocs/modules/pm/language/english/main.php
+- hernoemd _PM_* -> _MD_PM_* (69 constanten, bijv. _PM_DELETED -> _MD_PM_DELETED)
+
+/htdocs/modules/pm/language/english/admin.php
+- hernoemd _PM_AM_* -> _AM_PM_* (8 constanten, bijv. _PM_AM_PRUNE -> _AM_PM_PRUNE)
+
+/htdocs/modules/pm/language/english/modinfo.php
+- hernoemd _PM_MI_* -> _MI_PM_* (18 constanten, bijv. _PM_MI_NAME -> _MI_PM_NAME)
+
+================================
+2026/05/17: Version 2.7.1-Betas/RC1
+================================
+/htdocs/modules/system/language/english/admin/blocksadmin.php
+- toegevoegd define('_AM_SYSTEM_BLOCKS_INVALID_CLONE', 'Invalid block parameters.');
+
+================================
+30/03/2025: Versie 2.7.0-Betas (eerder uitgebracht als 2.5.12-Betas)
+================================
+/htdocs/install/language/english/install.php
+- toegevoegd define('MISSING_REQUIRED_EXTENSIONS', 'Required PHP extensions are missing');
+- toegevoegd define('MISSING_REQUIRED_EXTENSIONS_MSG', 'XOOPS cannot be installed because the following mandatory PHP extension(s) are not available: %s. Enable them in your PHP configuration (php.ini) and restart your web server, then reload this page.');
+
+/htdocs/modules/system/language/english/admin/modulesadmin.php
+- toegevoegd define('_AM_SYSTEM_MODULES_CONFIG_DATA_INVALID', ' ERROR: Skipped malformed config entry %s. ');
+
+/htdocs/modules/system/taal/english/admin.php
+- toegevoegd define('_AM_SYSTEM_MENUS', 'Menu's');
+- toegevoegd define('_AM_SYSTEM_MENUS_DESC', 'Sitenavigatiemenu's beheren');
+
+/htdocs/modules/system/taal/english/modinfo.php
+- toegevoegd define('_MI_SYSTEM_MENUS_ACTIVE', 'Menusysteem inschakelen');
+- toegevoegd define('_MI_SYSTEM_MENUS_ACTIVE_DESC', 'Het ingebouwde menubeheersysteem voor sitenavigatie inschakelen');
+
+/htdocs/modules/system/taal/english/admin/menus.php (NIEUW BESTAND)
+- toegevoegd define('_AM_SYSTEM_MENUS_NAV_MAIN', 'Menubeheer');
+- toegevoegd define('_AM_SYSTEM_MENUS_NAV_BACK', 'Terug naar menulijst');
+- toegevoegd define('_AM_SYSTEM_MENUS_NAV_CATEGORY', 'Categorieweergave');
+- toegevoegd define('_AM_SYSTEM_MENUS_NAV_TIPS', '<strong>Tips:</strong><ul>...');
+- toegevoegd define('_AM_SYSTEM_MENUS_ACTIVE', 'Actief');
+- toegevoegd define('_AM_SYSTEM_MENUS_ACTIVE_YES', 'Ingeschakeld');
+- toegevoegd define('_AM_SYSTEM_MENUS_ACTIVE_NO', 'Uitgeschakeld');
+- toegevoegd define('_AM_SYSTEM_MENUS_SAVED', 'Succesvol opgeslagen');
+- toegevoegd define('_AM_SYSTEM_MENUS_DELETED', 'Succesvol verwijderd');
+- toegevoegd define('_AM_SYSTEM_MENUS_ORDER_SAVED', 'Bestelling opgeslagen');
+- toegevoegd define('_AM_SYSTEM_MENUS_LISTCAT', 'Lijstcategorieën');
+- toegevoegd define('_AM_SYSTEM_MENUS_LISTITEM', 'Lijstitems');
+- toegevoegd define('_AM_SYSTEM_MENUS_ADDCAT', 'Categorie toevoegen');
+- toegevoegd define('_AM_SYSTEM_MENUS_EDITCAT', 'Categorie bewerken');
+- toegevoegd define('_AM_SYSTEM_MENUS_DELCAT', 'Categorie verwijderen');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATTITLE', 'Categorietitel');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATTITLE_DESC', 'Een taalconstantenaam (bijvoorbeeld MENUS_HOME) kan hier worden gebruikt, zodat het label vertaalbaar is.');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATPREFIX', 'Voorvoegsel (HTML)');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATPREFIX_DESC', 'Optionele opmaak weergegeven vóór de categorietitel, zoals een Font Awesome-pictogram.');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATSUFFIX', 'Achtervoegsel (HTML)');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATSUFFIX_DESC', 'Optionele opmaak weergegeven na de categorietitel.');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATURL', 'URL');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATURL_DESC', 'Link voor de categorie zelf toegevoegd, zoals "index.php" of een absolute URL.');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATTARGET', 'Linkdoel');
+- toegevoegd define('_AM_SYSTEM_MENUS_CATPOSITION', 'Positie');
+- toegevoegd define('_AM_SYSTEM_MENUS_DELCAT_CONFIRM', 'Weet je zeker dat je de categorie "%s" en al zijn items wilt verwijderen?');
+- toegevoegd define('_AM_SYSTEM_MENUS_ADDITEM', 'Item toevoegen');
+- toegevoegd define('_AM_SYSTEM_MENUS_EDITITEM', 'Item bewerken');
+- toegevoegd define('_AM_SYSTEM_MENUS_DELITEM', 'Item verwijderen');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMTITLE', 'Itemtitel');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMTITLE_DESC', 'Hier kan een taalconstantenaam worden gebruikt, zodat het label vertaalbaar is.');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMPREFIX', 'Voorvoegsel (HTML)');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMPREFIX_DESC', 'Optionele opmaak weergegeven vóór de itemtitel, zoals een Font Awesome-pictogram.');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMSUFFIX', 'Achtervoegsel (HTML)');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMSUFFIX_DESC', 'Optionele opmaak weergegeven na de itemtitel. Ondersteunt de <{xoInboxCount}> tijdelijke aanduiding.');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMURL', 'URL');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMTARGET', 'Linkdoel');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMPOSITION', 'Positie');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMPARENT', 'Ouderitem');
+- toegevoegd define('_AM_SYSTEM_MENUS_ITEMCATEGORY', 'Categorie');
+- toegevoegd define('_AM_SYSTEM_MENUS_DELITEM_CONFIRM', 'Weet je zeker dat je het item "%s" en zijn subitems wilt verwijderen?');
+- toegevoegd define('_AM_SYSTEM_MENUS_TARGET_SELF', 'Hetzelfde venster');
+- toegevoegd define('_AM_SYSTEM_MENUS_TARGET_BLANK', 'Nieuw venster');
+- toegevoegd define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_CATEGORY', 'Groepen die deze categorie kunnen zien');
+- toegevoegd define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_CATEGORY_DESC', 'Gebruikers moeten categorietoegang hebben voordat een van de items zichtbaar wordt.');
+- toegevoegd define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_ITEM', 'Groepen die dit item kunnen zien');
+- toegevoegd define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_ITEM_DESC', 'Itemrechten worden gecontroleerd na de toestemming van de bovenliggende categorie.');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_CATNOTFOUND', 'Categorie niet gevonden');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_CATPROTECTED', 'Kan een beveiligde categorie niet verwijderen');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_CATINACTIVE', 'Kan niet activeren: de categorie is inactief');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_ITEMNOTFOUND', 'Item niet gevonden');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_ITEMPROTECTED', 'Kan een beveiligd item niet verwijderen');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_ITEMPARENT', 'Ongeldig bovenliggend item geselecteerd');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_ITEMCYCLE', 'Kan ouder niet instellen: er zou een kringverwijzing ontstaan');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_ITEMDEPTH', 'Maximale nestdiepte (3 niveaus) overschreden');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_PARENTINACTIVE', 'Kan niet activeren: het bovenliggende item is inactief');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_NOITEMS', 'Er zijn geen submenu-items in deze categorie.');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_ITEMEDIT', 'Schakel dit item in voordat je het bewerkt');
+- toegevoegd define('_AM_SYSTEM_MENUS_ERROR_ITEMDISABLE', 'Schakel dit item in voordat je het verwijdert');
+- toegevoegd define('MENUS_HOME', 'Thuis');
+- toegevoegd define('MENUS_ADMIN', 'Beheer');
+- toegevoegd define('MENUS_ACCOUNT', 'Account');
+- toegevoegd define('MENUS_ACCOUNT_EDIT', 'Account bewerken');
+- toegevoegd define('MENUS_ACCOUNT_LOGIN', 'Inloggen');
+- toegevoegd define('MENUS_ACCOUNT_LOGOUT', 'Uitloggen');
+- toegevoegd define('MENUS_ACCOUNT_REGISTER', 'Aanmelden');
+- toegevoegd define('MENUS_ACCOUNT_MESSAGES', 'Berichten');
+- toegevoegd define('MENUS_ACCOUNT_NOTIFICATIONS', 'Meldingen');
+- toegevoegd define('MENUS_ACCOUNT_TOOLBAR', 'Werkbalk');
+
+/htdocs/modules/system/constants.php
+- toegevoegd define('XOOPS_SYSTEM_MENUS', 19);
+
+/htdocs/modules/system/taal/english/blocks.php
+-toegevoegd define('_MB_SYSTEM_WAITING_CONTENT_DEPRECATED', "Blokkeer 'Wachtende inhoud' is verouderd sinds XOOPS 2.5.11, gebruik de wachtmodule");
+
+/htdocs/install/taal/english/welcome.php
+- bijgewerkte PHP- en MySQL-versies
+
+/htdocs/modules/pm/taal/english/main.php
+- toegevoegd define('_MD_PM_EMAIL_DESC', 'Beste %s, dit is een bericht dat is overgebracht van uw account op ' . $GLOBALS['xoopsConfig']['sitename']);
+Met de link
+- toegevoegd define('_MD_PM_EMAIL_DESC', 'Beste %s, dit is een bericht overgedragen vanaf uw account op ' . $GLOBALS['xoopsConfig']['sitename']);
+
+/htdocs/taal/english/user.php
+- bijgewerkt define('_US_SORRYNOTFOUND', 'Sorry, er is geen overeenkomstige gebruikersinformatie gevonden.');
+- bijgewerkt define('_US_SORRYNOTFOUND', 'Als een account overeenkomt met de verstrekte informatie, zullen we uw verzoek verwerken. Als u binnenkort geen e-mail ontvangt, controleer dan uw spammap of neem contact op met de sitebeheerder.');
+
+- bijgewerkt define('_US_PWDMAILED', 'Wachtwoord voor %s gemaild.');
+- bijgewerkt define('_US_PWDMAILED', 'Als er een account bestaat voor deze e-mail, ontvangt u instructies voor het opnieuw instellen van het wachtwoord. Controleer indien nodig uw spammap of neem contact op met de sitebeheerder.');
+
+- bijgewerkt define('_US_CONFMAIL', 'Bevestigingsmail voor %s gemaild.');
+- bijgewerkt define('_US_CONFMAIL', 'Als er een account bestaat voor deze e-mail, ontvangt u instructies voor het opnieuw instellen van het wachtwoord. Controleer indien nodig uw spammap of neem contact op met de sitebeheerder.');
+
+/htdocs/class/xoopseditor/tinymce5/taal/english.php
+- hernoemd naar _XOOPS_EDITOR_TINYMCE_LANGUAGE5 naar _XOOPS_EDITOR_TINYMCE5_LANGUAGE
+
+/htdocs/modules/system/themes/transition/taal/english/admin.php
+- hernoemd _OXYGEN_Server_API naar _OXYGEN_SERVER_API
+
+/htdocs/modules/system/taal/english/admin/preferences.php.
+- toegevoegd define('_MD_AM_SENDMAIL_NOT_FOUND', 'Sendmail binair bestand niet gevonden. Controleer uw serverconfiguratie.');
+- toegevoegd define('_MD_AM_SENDMAIL_HELP_MISSING_BIN', 'Er is geen geldig sendmail-compatibel binair bestand gedetecteerd. Installeer een MTA (bijvoorbeeld Postfix, msmtp) of schakel over naar SMTP in Voorkeuren.');
+
+/htdocs/modules/system/taal/english/admin/users.php
+- toegevoegd define('_AM_SYSTEM_USERS_UNKNOWN_GROUP', 'Onbekende groep');
+
+/htdocs/modules/system/taal/english/comment.php
+- toegevoegd define('_CM_ADDCOMMENT', 'Commentaar toevoegen');
+
+
+/htdocs/install/taal/english/install.php
+- toegevoegd define('_WEBSITE_NAME', 'XOOPS-site') toegevoegd;
+- toegevoegd define('_WEBSITE_SLOGAN', 'Gebruik het gewoon!');
+- toegevoegd define('_WEBSITE_META_KEYWORDS', 'xoops, webapplicatieframework, cms, contentmanagementsysteem');
+- toegevoegd define('_WEBSITE_FOOTER', "Ondersteund door XOOPS © 2001-{X_YEAR} <a href='https://xoops.org' rel='external' title='Het XOOPS-project'>Het XOOPS-project</a>");
+- toegevoegd define('_WEBSITE_COPYRIGHT', 'Copyright © 2001-{X_YEAR}');
+- toegevoegd define('_WEBSITE_DESCRIPTION', 'XOOPS is een dynamisch objectgeoriënteerd gebaseerd open source portalscript geschreven in PHP.');
+- toegevoegd define('_WEBSITE_CENSOR_REPLACE', 'OOPS');
+
+
+================================
+01/10/2023: Versie 2.5.11-Final
+================================
+/taal/english/uploader.php
+-toegevoegd define('_ER_UP_MODE_NOT_CHANGED', 'Bestand geüpload, maar kon de modus niet wijzigen');
+
+================================
+01/10/2023: Versie 2.5.11-RC3
+================================
+
+GEWIJZIGDE BESTANDEN:
+upgrade/taal/english/upgrade.php
+upgrade/taal/english/smarty3.php
+
+htdocs/class/xoopseditor/tinymce/lingual/english.php
+- toegevoegd define('_FAILGETIMG', 'Kan afbeelding %s niet ophalen');
+
+/htdocs/modules/system/taal/english/modinfo.php
+- toegevoegd define('_MI_DEFAULT_NOTIFICATION_METHOD_DISABLE', 'Tijdelijk uitschakelen');
+- toegevoegd define('_MI_DEFAULT_NOTIFICATION_METHOD_EMAIL', 'E-mail');
+- toegevoegd define('_MI_DEFAULT_NOTIFICATION_METHOD_PM', 'Privébericht');
+
+/htdocs/modules/systeem/taal/english/admin/preferences.php
+- toegevoegd define('_MD_AM_DEFAULT_NOTIFICATION_METHOD', 'Standaard meldingsmethode');
+- toegevoegd define('_MD_AM_DEFAULT_NOTIFICATION_METHOD_DESC', 'Voor nieuwe gebruikers wanneer zij zich abonneren op meldingen van bijvoorbeeld een forum.');
+- toegevoegd define('_MD_AM_MODULEPREF',
+
+
+================================
+2023/03/19: Versie 2.5.11-RC1
+================================
+
+GEWIJZIGDE BESTANDEN:
+htdocs/taal/english/global.php
+- toegevoegd define('_DB_QUERY_ERROR', 'Query mislukt! SQL: %s - Fout: ');
+- toegevoegd define('_PRINT', 'Afdrukken');
+- toegevoegd define('_PDF', 'PDF');
+- toegevoegd define('_OFF', 'Uit');
+
+================================
+2021/09/02: Versie 2.5.11-Betas
+================================
+
+GEWIJZIGDE BESTANDEN:
+htdocs/taal/english/admin.php
+- toegevoegd define('_AD_WARNING_NO_XML', 'De PHP XML-extensie is vereist voor deze functie.');
+
+htdocs/xoops_lib/modules/protector/taal/english/admin.php
+- toegevoegd define('_AM_ADMINSTATS_LAST_MONTH', 'Vorige maand');
+- toegevoegd define('_AM_ADMINSTATS_LAST_WEEK', 'Vorige week');
+- toegevoegd define('_AM_ADMINSTATS_LAST_DAY', 'Laatste dag');
+- toegevoegd define('_AM_ADMINSTATS_LAST_HOUR', 'Laatste uur');
+
+htdocs/taal/english/global.php
+- toegevoegd define('_PRINT', 'Afdrukken');
+- toegevoegd define('_PDF', 'PDF');
+- toegevoegd define('_OFF', 'Uit');
+- gewijzigd define('_ON', 'Aan'); //vanaf 'aan'
+
+htdocs/taal/english/global.php
+- gewijzigd define('_SIZE', 'Grootte'); // lettergrootte
+- gewijzigd define('_FONT', 'Lettertype'); // lettertypefamilie
+- gewijzigd define('_COLOR', 'Kleur'); // lettertypekleur
+
+htdocs/install/taal/english/install.php
+- toegevoegd define('ERR_COPY_CONFIG_FILE', 'Kan het configuratiebestand %s niet kopiëren');
+
+htdocs/install/taal/english/welcome.php
+- aanbevolen PHP- en MySQL-versies gewijzigd, links gewijzigd in "https:"
+
+htdocs/modules/system/taal/english/admin/preferences.php
+- gewijzigd define('_MD_AM_SMTPHOSTDESC', 'Een enkele hostnaam of meerdere door puntkomma's gescheiden hostnamen.<br>Je kunt voor elke host ook een andere poort opgeven door dit formaat te gebruiken: [hostnaam:poort] (bijvoorbeeld "smtp1.example.com:25;smtp2.example.com").<br>Je kunt ook het coderingstype opgeven, bijvoorbeeld: (bijvoorbeeld "tls://smtp1.example.com:587;ssl://smtp2.example.com:465").<br>Hosts worden in volgorde geprobeerd.');
+
+htdocs/modules/system/taal/english/help/blocksadmin.html
+
+htdocs/modules/system/taal/english/admin/modulesadmin.php
+- gewijzigd define('_AM_SYSTEM_MODULES_ADMIN', 'XOOPS Modulebeheer');
+
+NIEUWE BESTANDEN:
+htdocs/themes/xswatch4/lingual/english/main.php
+Begonnen als kopie van xswatch/taal/english/main.php en vervolgens:
+- toegevoegd define('THEME_TOOLBAR_DEBUGMODE', 'Debug-modus');
+- toegevoegd define('THEME_TOOLBAR_THIS_MODULE', 'Deze module');
+- toegevoegd define('THEME_PERMISSIONS_LEGEND', 'Rechten en legenda');
+- toegevoegd define('THEME_INBOX_ALERT', 'PM-waarschuwing');
+- toegevoegd define('THEME_INBOX_LINK', 'Klik hier om uw Postvak IN te bekijken!');
+- toegevoegd define('THEME_EVENT_DOWNLOADS', 'Downloads van evenementen');
+- toegevoegd define('THEME_FILE_NAME', 'Bestand');
+- toegevoegd define('THEME_FILE_SIZE', 'Grootte');
+- toegevoegd define('THEME_CONTROL_NEXT', 'Volgende');
+- toegevoegd define('THEME_CONTROL_PREVIOUS', 'Vorige');
+
+htdocs/taal/english/user.php
+- toegevoegd define('_US_DESCRIPTIONMIN', 'Minimaal vereiste lengte: %s');
+- toegevoegd define('_US_DESCRIPTIONMAX', 'Maximale lengte: %s');
+
+htdocs/modules/system/taal/english/admin/mailusers.php
+- toegevoegd define('_AM_SYSTEM_MAILUSERS_MAILTAGS5', '{X_NAME} zal naam of naam afdrukken indien leeg');
+
+htdocs/modules/system/taal/english/admin/images.php
+- toegevoegd define("_AM_SYSTEM_IMAGES_SCATDELNG","Kan deze categorie niet verwijderen");
+
+htdocs/modules/system/taal/english/admin/modulesadmin.php
+- toegevoegd define('_AM_SYSTEM_MODULES_INSTALL_THISMODULE', 'Deze modulebeheerder');
+
+VERWIJDERDE BESTANDEN:
+htdocs/modules/system/taal/english/admin/users.php
+- verwijderd define('_AM_SYSTEM_USERS_MODIFYUSER', 'Gebruiker wijzigen');
+- verwijderd define('_AM_SYSTEM_USERS_DELUSER', 'Gebruiker verwijderen');
+- verwijderd define('_AM_SYSTEM_USERS_GO', 'Go!');
+
+================================
+29-04-2019: Versie 2.5.10 definitief
+================================
+TOEGEVOEGDE/VERWIJDERDE DEFINIËREN:
+htdocs/xoops_lib/modules/protector/taal/english/admin.php
+- toegevoegd define('_AM_LABEL_BAN_BY_IP', 'Verbied de IP's op gecontroleerde records:');
+- toegevoegd define('_AM_BUTTON_BAN_BY_IP', 'IP-verbod!');
+- toegevoegd define('_AM_JS_BANCONFIRM', 'IP-verboden OK?');
+- toegevoegd define('_AM_MSG_BANNEDIP', 'IP's zijn verboden');
+- toegevoegd define('_AM_ADMINSTATS_TITLE', 'Samenvatting van het Protector-logboek');
+
+htdocs/xoops_lib/modules/protector/lingual/english/modinfo.php
+- definitie toegevoegd($constpref . '_ADMINSTATS', 'Overzicht');
+- definitie toegevoegd($constpref . '_BANIP_TIME0DSC', 'Opschortingstijd in seconden voor automatische IP-bans');
+
+htdocs/taal/english/uploader.php
+- toegevoegd define('_ER_UP_INDEXNOTSET', 'Poging om meerdere bestanden op te halen, index moet ingesteld zijn.');
+
+htdocs/taal/english/admin.php
+- toegevoegd define('_AD_WARNING_OLD_PHP', 'WAARSCHUWING: overweeg een upgrade naar een nieuwere versie van PHP. Versie %s of nieuwer wordt aanbevolen en zal vereist zijn in toekomstige XOOPS-versies.');
+
+GEWIJZIGDE DEFINIËREN
+htdocs/xoops_lib/modules/protector/taal/english/admin.php
+- toegevoegd define('_AM_TXT_HOWTOCHANGEDB',"Als u het voorvoegsel wilt wijzigen,<br> bewerk dan %s/data/secure.php handmatig.<br><br>define('XOOPS_DB_PREFIX', '<b>%s</b>');");
+
+htdocs/install/english/welcome.php
+- aanbevolen PHP-versie gewijzigd, sectie met speciale opmerkingen voor SELinux toegevoegd
+
+/home/richard/sites/x258i/htdocs/Frameworks/moduleclasses/moduleadmin/taal/english/main.php
+- in de definitie van '_AM_MODULEADMIN_ADMIN_FOOTER', XOOPS-links gewijzigd in 'https://xoops.org'
+
+NIEUWE BESTANDEN:
+n.v.t
+
+===============================
+01/08/2017: Versie 2.5.9 definitief
+===============================
+DEFINITIES TOEGEVOEGD/VERWIJDERD
+
+htdocs/Frameworks/moduleclasses/moduleadmin/taal/english/main.php
+- toegevoegd define('_AM_MODULEADMIN_ABOUT_AMOUNT', 'Bedrag');
+- toegevoegd define('_AM_MODULEADMIN_ABOUT_AMOUNT_TTL', 'Voer een USD-bedrag in, bijvoorbeeld $ 25,00');
+- toegevoegd define('_AM_MODULEADMIN_ABOUT_AMOUNT_CURRENCY', 'USD');
+- toegevoegd define('_AM_MODULEADMIN_ABOUT_AMOUNT_SUGGESTED', '25.00');
+- toegevoegd define('_AM_MODULEADMIN_ABOUT_AMOUNT_PATTERN', '\\$?[0-9]+(,[0-9]{3})*(\\.[0-9]{0,2})?$');
+- toegevoegd define('_AM_MODULEADMIN_ABOUT_DONATE_IMG_ALT', 'Doneer online met PayPal of een bekende creditcard!');
+
+htdocs/install/taal/english/install.php
+*OPMERKING* Het installatieprogramma is aanzienlijk gewijzigd, dus dit bestand moet nauwkeurig worden gecontroleerd
+- toegevoegd define("CURL_HTTP", "Client-URL-bibliotheek (cURL)");
+- toegevoegd define('XOOPS_COOKIE_DOMAIN_LABEL', 'Cookiedomein voor de website');
+- toegevoegd define('XOOPS_COOKIE_DOMAIN_HELP', 'Domein om cookies in te stellen. Mag leeg zijn, de volledige host van de URL (www.example.com), of het geregistreerde domein zonder subdomeinen (example.com) om te delen tussen subdomeinen (www.example.com en blog.example.com.)');
+- toegevoegd define('INTL_SUPPORT', 'Internationaliseringsfuncties');
+- toegevoegd define('XOOPS_SOURCE_CODE', "XOOPS op GitHub");
+- toegevoegd define('XOOPS_INSTALLING', 'Installeren');
+- toegevoegd define('XOOPS_ERROR_ENCOUNTERED', 'Fout');
+- toegevoegd define('XOOPS_ERROR_SEE_BELOW', 'Zie hieronder voor berichten.');
+- toegevoegd define('MODULES_AVAILABLE', 'Beschikbare modules');
+- toegevoegd define('INSTALL_THIS_MODULE', 'Voeg %s toe');
+
+htdocs/install/taal/english/finish.php
+- wijzig dit om nieuwe gebruikers door te verwijzen naar xoops.org voor informatie over modules en thema's
+
+htdocs/taal/english/global.php
+- toegevoegd define('_UPLOAD', 'Uploaden');
+- toegevoegd define('_SELECTFILES', 'Selecteer bestanden');
+- toegevoegd define('_DROPFILESHERE', 'Zet bestanden hier neer') toegevoegd;
+- toegevoegd define('_RETRY', 'Opnieuw proberen');
+- toegevoegd define('_OK', 'Ok');
+- toegevoegd define('_FORMATPROGRESS', '{percent}% van {total_size}');
+- toegevoegd define('_FAILUPLOAD', 'Uploaden mislukt!');
+- toegevoegd define('_WAITINGFORRESPONSE', 'Bezig met verwerken...');
+- toegevoegd define('_PAUSED', 'Gepauzeerd');
+- toegevoegd define('_PROCESSINGDROPPEDFILES', 'Verwerkt verwijderde bestanden...');
+- toegevoegd define('_TYPEERROR', '{bestand} heeft een ongeldige extensie toegevoegd. Geldige extensie(s): {extensies}!');
+- toegevoegd define('_SIZEERROR', '{file} is te groot, maximale bestandsgrootte is {sizeLimit}!');
+- toegevoegd define('_MINSIZEERROR', '{file} is te klein, minimale bestandsgrootte is {minSizeLimit}!');
+- toegevoegd define('_EMPTYERROR', '{bestand} is leeg, selecteer alstublieft opnieuw bestanden zonder dit!');
+- toegevoegd define('_NOFILESERROR', 'Geen bestanden om te uploaden!');
+- toegevoegd define('_TOOMANYITEMSERROR', 'Er zouden te veel items ({netItems}) worden geüpload. De itemlimiet is {itemLimit}!');
+- toegevoegd define('_MAXHEIGHTIMAGEERROR', 'Afbeelding is te hoog!');
+- toegevoegd define('_MAXWIDTHIMAGEERROR', 'Afbeelding is te breed!');
+- toegevoegd define('_MINHEIGHTIMAGEERROR', 'Afbeelding is niet hoog genoeg!');
+- toegevoegd define('_MINWIDTHIMAGEERROR', 'Afbeelding is niet breed genoeg!');
+- toegevoegd define('_RETRYFAILTOOMANYITEMS', 'Opnieuw proberen mislukt - je hebt je bestandslimiet bereikt!');
+- toegevoegd define('_ONLEAVE', 'De bestanden worden geüpload, als je nu weggaat, wordt de upload geannuleerd!');
+- toegevoegd define('_UNSUPPORTEDBROWSERIOS8SAFARI', 'Onherstelbare fout - deze browser staat het uploaden van bestanden van welke aard dan ook niet toe vanwege ernstige bugs in iOS8 Safari. Gebruik iOS8 Chrome totdat Apple deze problemen heeft opgelost!');
+
+htdocs/taal/english/uploader.php
+- toegevoegd define('_ER_UP_INISIZE', 'Het geüploade bestand overschrijdt de upload_max_filesize richtlijn in php.ini');
+- toegevoegd define('_ER_UP_FORMSIZE', 'Het geüploade bestand overschrijdt de MAX_FILE_SIZE richtlijn die is opgegeven in het HTML-formulier');
+- toegevoegd define('_ER_UP_PARTIAL', 'Het geüploade bestand is slechts gedeeltelijk geüpload');
+- toegevoegd define('_ER_UP_NOFILE', 'Er is geen bestand geüpload');
+- toegevoegd define('_ER_UP_NOTMPDIR', 'Er ontbreekt een tijdelijke map');
+- toegevoegd define('_ER_UP_CANTWRITE', 'Kan bestand niet naar schijf schrijven');
+- toegevoegd define('_ER_UP_EXTENSION', 'Bestandsupload gestopt door extensie. Bekijk phpinfo()');
+- toegevoegd define('_ER_UP_UNKNOWN', 'Onbekende uploadfout');
+
+htdocs/taal/english/user.php
+- verwijderd define('_US_USECOOKIE', 'Bewaar mijn gebruikersnaam in een cookie voor 1 jaar');
+
+htdocs/modules/profile/taal/english/admin.php
+- toegevoegd define('_PROFILE_AM_CANNOTDEACTIVATEWEBMASTERS', 'U kunt uw webmasteraccount niet deactiveren');
+
+htdocs/modules/system/taal/english/admin/comments.php
+- toegevoegd define('_MP_DELETECOUNT', 'Het aantal leden in de groep is te groot ( > 4.000) ');
+
+htdocs/modules/system/taal/english/admin/userrank.php
+- toegevoegd define('_AM_SYSTEM_USERRANK_ERROR', 'Fouten');
+
+upgrade/taal/english/upgrade.php
+- toegevoegd define('_LANGUAGE', 'Taal');
+- toegevoegd define('_SUPPORT', 'Ondersteuning');
+- toegevoegd define('_XOOPS_SOURCE_CODE', 'XOOPS op GitHub');
+- toegevoegd define('_PATCH_COUNT', 'Patchessets');
+- toegevoegd define('_USERNAME_PLACEHOLDER', 'Uw gebruikersnaam') toegevoegd;
+- toegevoegd define('_PASSWORD_PLACEHOLDER', 'Uw wachtwoord') toegevoegd;
+- toegevoegd define('_CONTINUE', 'Doorgaan');
+- toegevoegd define('XOOPS_ERROR_ENCOUNTERED', 'Fout');
+- toegevoegd define('XOOPS_ERROR_SEE_BELOW', 'Zie hieronder voor berichten.');
+
+htdocs/themes/xbootstrap/taal/english/main.php
+- toegevoegd define("THEME_USER_WELCOME", "Welkom");
+
+NIEUWE BESTANDEN:
+- htdocs/modules/system/themes/transition/taal/english/admin.php
+- htdocs/modules/system/themes/transition/taal/english/localsupport.php
+
+- upgrade/taal/english/
+*OPMERKING* De upgradecode is aanzienlijk gewijzigd, dus deze bestanden moeten nauwkeurig worden gecontroleerd
+- alle taalbestanden per patch verplaatst van patchmappen naar upgrade/taal/*
+  d.w.z. upgrade/upd-2.0.18-naar-2.3.0/taal/english.php werd
+  upgrade/taal/english/upd-2.0.18-to-2.3.0.php
+
+- upgrade/taal/english/support.php (hetzelfde als htdocs/install/taal/english/support.php)
+- upgrade/taal/english/welcome.php
+
+===============================
+27/05/2016: Versie 2.5.8
+===============================
+DEFINITIES TOEGEVOEGD/VERWIJDERD
+
+/install/taal/english/install.php
+/modules/systeem/taal/english/admin/modulesadmin.php
+- toegevoegd define('_AM_SYSTEM_MODULES_INSTALL_MORE',"Meer modules installeren");
+
+/modules/systeem/taal/english/admin/users.php
+definiëren('_AM_SYSTEM_USERS_ACTIVATE', 'Gebruiker activeren');
+
+/modules/systeem/taal/english/blocks.php
+definiëren('_MB_SYSTEM_BLOCK_HEIGHT',"Blokhoogte (lijnen)");
+
+install/taal/english/install.php
+definiëren('CHMOD_CHGRP_REPEAT', 'Opnieuw proberen');
+definiëren('CHMOD_CHGRP_IGNORE', 'Hoe dan ook gebruiken');
+definiëren('CHMOD_CHGRP_ERROR', 'Het installatieprogramma kan het configuratiebestand %1$s mogelijk niet schrijven.<p>PHP schrijft bestanden onder gebruiker %2$s en groep %3$s.<p>Het probleem
+
+GEWIJZIGDE DEFINIËREN
+xoops_lib/modules/protector/taal/english/modinfo.php
+definiëren($constpref . '_HIJACK_TOPBITDSC', ...
+
+/modules/systeem/themes/default/taal/english/admin.php
+definiëren('_OXYGEN_CODESVN', 'Codeopslagplaats');
+
+install/taal/english/install.php
+definiëren('SAVED_MAINFILE', 'Instellingen opgeslagen');
+definition('ERR_NEED_WRITE_ACCESS', 'De server moet schrijftoegang krijgen tot de volgende bestanden en mappen<br />(d.w.z. <em>chmod 775 mapnaam</em> op een UNIX/LINUX-server)<br />Als ze niet beschikbaar zijn of niet correct zijn aangemaakt, maak dan handmatig een map aan en stel de juiste rechten in.');
+definiëren('ERR_COPY_MAINFILE', 'Kon het distributiebestand niet kopiëren naar %s');
+definiëren('ERR_WRITE_MAINFILE', 'Kon niet schrijven naar %s. Controleer de bestandsrechten en probeer het opnieuw.');
+definiëren('ERR_READ_MAINFILE', 'Kon %s niet openen om te lezen');
+
+/modules/system/themes/zetadigme/taal/english/admin.php
+definiëren('_MD_CODESVN', 'Codeopslagplaats');
+
+NIEUWE BESTANDEN:
+/taal/english/stopwords.php
+/taal/english/xmf.php
+
+BIJGEWERKT XoopsMailerLocal-klassevoorbeeld:
+htdocs/taal/english/xoopsmailerlocal.php
+
+===============================
+2014/06/14: Versie 2.5.7 definitief
+===============================
+DEFINITIES TOEGEVOEGD/VERWIJDERD
+
+/install/taal/english/install.php
+- toegevoegd define('WRITTEN_LICENSE',"Geschreven XOOPS %s Licentiesleutel: <strong>%s</strong>");
+
+===============================
+2014/03/18: Versie 2.5.7 RC1
+===============================
+DEFINITIES TOEGEVOEGD/VERWIJDERD
+
+/modules/systeem/taal/english/admin.php
+- toegevoegd define('_AM_SYSTEM_USAGE',"Gebruik");
+- toegevoegd define('_AM_SYSTEM_ACTIVE',"Actief");
+
+
+===============================
+2012/04/15: Versie 2.5.5
+===============================
+DEFINITIES TOEGEVOEGD/VERWIJDERD
+
+/Frameworks/moduleclasses/moduleadmin/taal/english/main.php
+- toegevoegd define("_AM_MODULEADMIN_HOME", "Thuis");
+- toegevoegd define("_AM_MODULEADMIN_DASHBOARD", "Dashboard");
+- toegevoegd define("_AM_MODULEADMIN_ABOUT", "Over");
+- toegevoegd define("_AM_MODULEADMIN_PERMISSIONS", "Rechten");
+- toegevoegd define("_AM_MODULEADMIN_ABOUT_RELEASEDATE","Uitgebracht: ");
+- toegevoegd define("_AM_MODULEADMIN_ABOUT_AUTHOR","Auteur: ");
+- toegevoegd define("_AM_MODULEADMIN_ABOUT_CREDITS","Credits: ");
+- toegevoegd define("_AM_MODULEADMIN_ABOUT_LICENSE","Licentie: ");
+- toegevoegd define("_AM_MODULEADMIN_ABOUT_AUTHOR_NAME","Auteurnaam: ");
+- toegevoegd define("_AM_MODULEADMIN_ABOUT_AUTHOR_INFO","Auteurinfo");
+- toegevoegd define("_AM_MODULEADMIN_ADMIN_FOOTER", "<div class='center smallsmall italic pad5'>Deze module wordt onderhouden door de <a class='tooltip' rel='external' href='http://xoops.org/' title='Bezoek XOOPS Community'>XOOPS Community</a></div>");
+
+/taal/english/calendar.php
+- toegevoegd define("_CAL_FORMAT","Y-m-d");
+
+/xoops_lib/modules/protector/taal/english/modinfo.php
+
+- definitie toegevoegd($constpref."_ADMINHOME","Home");
+- definitie toegevoegd($constpref."_ADMINABOUT","Over");
+- definitie toegevoegd($constpref.'_STOPFORUMSPAM_ACTION','Stop Forum Spam');
+- definitie toegevoegd($constpref.'_STOPFORUMSPAM_ACTIONDSC','Controleert POST-gegevens op spammers die zijn geregistreerd in de database van www.stopforumspam.com. Vereist php CURL lib.');
+
+
+/install/taal/english/install.php
+- toegevoegd define( "FILTER_FUNCTIONS", "Filterfuncties");
+
+/taal/english/global.php
+- toegevoegd define('_DBDATESTRING', 'Y-m-d');
+- toegevoegd define('_DBTIMESTRING', 'H:i:s');
+- toegevoegd define('_DBTIMESTAMPSTRING', 'Y-m-d H:i:s');
+
+/taal/english/pmsg.php
+- toegevoegd define('_MD_PM_READ', 'Al gelezen');
+
+/modules/systeem/taal/english/admin.php
+- toegevoegd define("_AM_SYSTEM_UNINSTALL","Verwijderen");
+
+ZIE OOK:
+/modules/profile/docs/lang_diff.txt
+
+===============================
+2011/11/17: Versie 2.5.4
+===============================
+
+/Frameworks/moduleclasses/moduleadmin/taal/english/main.php
+_AM_MODULEADMIN_CONFIG_DB
+_AM_MODULEADMIN_CONFIG_ADMIN
+
+===============================
+2011/10/10: Versie 2.5.4 RC
+===============================
+
+NIEUWE BESTANDEN:
+modules/pm/taal/english/help/help.html
+modules/profiel/taal/english/help/help.html
+modules/protector/taal/english/help/help.html
+
+DEFINITIES TOEGEVOEGD/VERWIJDERD
+
+/taal/english/pmsg.php
+delete definiëren('_MD_PM_READ', 'Al gelezen');
+
+/taal/english/user.php
+- toegevoegd define('_US_SKYPE', 'Skype');
+- toegevoegd define('_US_FACEBOOK', 'Facebook');
+
+/modules/pm/taal/english/main.php
+- toegevoegd define("_MD_PM_RECEIVE","RECEIVE");
+- toegevoegd define("_MD_PM_POST","POST");
+- toegevoegd define("_MD_PM_READBOX","READBOX");
+- toegevoegd define("_MD_PM_RSAVEBOX","Receive_SAVEBOX");
+- toegevoegd define("_MD_PM_SENTBOX","SENTBOX");
+- toegevoegd define("_MD_PM_PSAVEBOX","Post_SAVEBOX");
+- toegevoegd define("_MD_PM_SAVED","Succesvol opgeslagen");
+- toegevoegd define("_MD_PM_TOC","Van: ");
+- toegevoegd define("_MD_PM_UID","Afzender-ID");
+
+/taal/english/findusers.php
+- toegevoegd define('_MA_USER_FACEBOOK', 'Facebook-link'); // TE DOEN
+- toegevoegd define('_MA_USER_SKYPE', 'Skype-link');//TO DOEN
+
+/modules/pm/taal/english/modinfo.php
+- toegevoegd define("_MI_PM_ABOUT", "Over");
+
+/modules/profile/taal/english/admin.php
+- toegevoegd define('_PROFILE_AM_ACTION', 'Actie');
+
+/modules/profile/taal/english/modinfo.php
+- toegevoegd define("_PROFILE_MI_ABOUT", "Over");
+- toegevoegd define("_PROFILE_MI_HOME", "Thuis");
+
+
+/modules/systeem/taal/english/admin/preferences.php
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_GENERAL","Algemene instellingen");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_USERSETTINGS","Gebruikersinfo-instellingen");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_METAFOOTER","Metatags en voettekst");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_CENSOR","Opties voor woordcensuur");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_SEARCH","Zoekopties");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_MAILER","E-mailinstellingen");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_AUTHENTICATION","Authenticatieopties");*/
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_GENERAL","Een eerlijk");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_USERSETTINGS","Een eerlijk");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_METAFOOTER","Een eerlijk");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_CENSOR","Een eerlijk");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_SEARCH","Een eerlijk");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_MAILER","Een eerlijk");
+- verwijderd define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_AUTHENTICATION","Een eerlijk");
+- verwijderd define("_MD_AM_LOADINGIMG", "Beeld wordt geladen... afbeelding?");
+- verwijderd define("_MD_AM_CHNGUTHEME", "Wijzig het thema van alle gebruikers");
+
+/modules/systeem/taal/english/admin/users.php
+- toegevoegd define("_AM_SYSTEM_USERS_ACCEPT_EMAIL","Accepteer e-mail van beheerder");
+
+- verwijderd define("_AM_SYSTEM_USERS_NAV_MANAGER","Gebruikersbeheer");
+- verwijderd define("_AM_SYSTEM_USERS_USERPOST","Gebruikersberichten");
+- verwijderd define("_AM_SYSTEM_USERS_STORIES","Verhalen");
+- verwijderd define("_AM_SYSTEM_USERS_COMMENTS","Opmerkingen");
+- verwijderd define("_AM_SYSTEM_USERS_PTBBTSDIYT","Druk op de onderstaande knop om gegevens te synchroniseren als u denkt dat de bovenstaande gebruikerspostinformatie niet de werkelijke status lijkt aan te geven");
+- verwijderd define("_AM_SYSTEM_USERS_CNGTCOM","Kan geen totaal aantal reacties ontvangen");
+- verwijderd define("_AM_SYSTEM_USERS_CNGTST","Kan het totale aantal verhalen niet ophalen");
+- verwijderd define("_AM_SYSTEM_USERS_LIST","Lijst");
+- verwijderd define("_AM_SYSTEM_USERS_USERPOST","Gebruikersberichten");
+- verwijderd define("_AM_SYSTEM_USERS_STORIES","Verhalen");
+- verwijderd define("_AM_SYSTEM_USERS_COMMENTS","Opmerkingen");
+- verwijderd define("_AM_SYSTEM_USERS_PTBBTSDIYT","Druk op de onderstaande knop om gegevens te synchroniseren als u denkt dat de bovenstaande gebruikerspostinformatie niet de werkelijke status aangeeft");
+- verwijderd define("_AM_SYSTEM_USERS_CNGTCOM","Kon niet alle reacties ontvangen");
+- verwijderd define("_AM_SYSTEM_USERS_CNGTST","Kan niet alle verhalen ophalen");
+- verwijderd define("_AM_SYSTEM_USERS_LIST","Lijst");
+
+xoops_lib/modules/protector/taal/english/admin.php
+- toegevoegd define("_AM_ADV_REGISTERGLOBALS2","en plaats daarin de onderstaande regel:");
+
+GEWIJZIGDE BESTANDEN:
+
+/modules/systeem/taal/english/admin/users.php (Mamba)/
+/taal/english/mail_template/activated.tpl
+/taal/english/mail_template/adminactivate.tpl
+/taal/english/mail_template/lostpass1.tpl
+/taal/english/mail_template/lostpass2.tpl
+/taal/english/mail_template/register.tpl
+/taal/english/mail_template/welcome.tpl
+/modules/systeem/taal/english/admin/avatars.php
+/modules/systeem/taal/english/admin/banners.php
+/modules/system/taal/english/admin/blocksadmin.php
+/modules/systeem/taal/english/admin/comments.php
+/modules/systeem/taal/english/admin/preferences.php
+/modules/systeem/taal/english/admin/userrank.php
+/modules/systeem/taal/english/admin/users.php
+/modules/system/taal/english/help/mailusers.html
+/modules/systeem/taal/english/help/preferences.html
+/modules/systeem/taal/english/admin.php
+/modules/systeem/taal/english/blocks.php
+/modules/systeem/taal/english/modinfo.php
+/modules/systeem/themes/default/taal/english/admin.php
+/modules/system/themes/zetadigme/taal/english/admin.php
+/themes/suico/taal/english/main.php
+/themes/zetagenese/taal/english/main.php
+
+
+===============================
+05/10/2011: Versie 2.5.4 Bèta
+===============================
+- diverse Engelse vertalingen bijgewerkt (DCrussader/Mamba)
+- verwijderde taal/english/calendar.php _CAL_DEF_DATE_FORMAT
+- verwijderde taal/english/calendar.php _CAL_TT_DATE_FORMAT
+- verwijderde modules/systeem/taal/english/admin/users.php _AM_SYSTEM_USERS_NAV_MANAGER
+- verwijderde modules/systeem/taal/english/admin/preferences.php _MD_AM_LOADINGIMG
+- verwijderde modules/systeem/taal/english/admin/preferences.php _MD_AM_CHNGUTHEME
+- verwijderde modules/pm/taal/english/admin/main.php _MD_PM_RECEIVE, _MD_PM_POST, _MD_PM_READBOX, _MD_PM_RSAVEBOX, _MD_PM_SENTBOX, _MD_PM_PSAVEBOX, _MD_PM_SAVED, _MD_PM_TOC
+- toegevoegd /modules/profile/taal/english/admin.php _PROFILE_AM_ACTION
+- toegevoegd /modules/profile/taal/english/main.php _PROFILE_MI_ABOUT
+- toegevoegd /modules/profile/taal/english/main.php _PROFILE_MI_HOME
+- toegevoegd /modules/pm/taal/english/modinfo.php _MI_PM_ABOUT
+- modules toegevoegd/systeem/taal/english/admin/users.php _AM_SYSTEM_USERS_FACEBOOK, _AM_SYSTEM_USERS_SKYPE
+- taal/english/user.php toegevoegd _US_SKYPE, _US_FACEBOOK
+
+xoops_lib/modules/protector/taal/english/modinfo.php
+- definitie toegevoegd($constpref.'_STOPFORUMSPAM_ACTION','Stop Forum Spam');
+- definitie toegevoegd($constpref.'_STOPFORUMSPAM_ACTIONDSC','Controleert POST-gegevens op spammers die zijn geregistreerd in de database van www.stopforumspam.com. Vereist php CURL lib.');
+
+
+
+===============================
+06/09/2011: Versie 2.5.2 RC
+===============================
+ - taal/english/misc.php toegevoegd _MSC_CLICK_TO_OPEN_IMAGE, _MSC_RESIZED_IMAGE, _MSC_ORIGINAL_IMAGE
+ - taal/english/pmsg.php toegevoegd _MD_PM_SURE_TO_DELETE, _MD_PM_READ
+ - modules toegevoegd/pm/taal/english/admin/main.php _MD_PM_READ, _MD_PM_SUBJECT_ICONS
+ - modules\systeem/taal/english/admin/tplsets.php _AM_SYSTEM_TEMPLATES_SET
+ - verwijderde modules/systeem/thema's/default/taal/english/admin/admin.php _OXYGEN_XOOPSENGINE
+ - verwijderde modules/systeem/taal/english/admin/blocksadmin.php _AM_SYSTEM_BLOCKS_SAVE
+ - taal/english/calendar.php toegevoegd _CAL_DEF_DATE_FORMAT
+ - taal/english/calendar.php toegevoegd _CAL_TT_DATE_FORMAT
+
+===============================
+2011/03/15: Versie 2.5.1 RC
+===============================
+
+Taalconstanten toegevoegd:
+  modules/systeem/taal/english/admin/images.php _AM_SYSTEM_IMAGES_URL
+  modules/systeem/thema's/default/taal/english/admin/admin.php _OXYGEN_XOOPSENGINE
+
+Gewijzigde taalconstanten:
+  modules/systeem/thema's/default/taal/english/admin/admin.php _OXYGEN_ABOUT_TEXT, _OXYGEN_WEBSITE
+  modules/systeem/taal/english/helper/help_center.html, modulesadmin.html
+
+Taalconstanten verwijderd:
+  modules/systeem/thema's/default/taal/english/admin/admin.php _OXYGEN_XGIFTSHOP, _OXYGEN_XDONATIONS, _OXYGEN_XDONATIONS_TEXT, _OXYGEN_KEY, _OXYGEN_LICENSE, _OXYGEN_SOURCEFORGE_TEXT, _OXYGEN_POWERED_BY
+  modules/systeem/thema's/default/taal/english/admin/admin.php _OXYGEN_XGIFTSHOP, _OXYGEN_XDONATIONS, _OXYGEN_XDONATIONS_TEXT, _OXYGEN_KEY, _OXYGEN_LICENSE, _OXYGEN_SOURCEFORGE_TEXT, _OXYGEN_POWERED_BY
